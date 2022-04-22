@@ -2,29 +2,39 @@
     background-color: rgba(255, 0, 0, 0.37);
 }
 
-body{
-    background-color: #98794B;
-}
 
 header{
+    height: 60px;
     background-color: bisque;
 }
 
+
+main{
+    height: calc(100vh - 130px);
+    background-color: #98794B;
+}
 /* GRID */
 .cg-container{
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 400px;
     margin:20px auto;
     display: flex;
     align-content: flex-start;
     flex-wrap: wrap;
+    background-color: red;
 }
 
 .box{
     display: flex;
     justify-content: center;
     align-items: center;
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+    border: 1px solid white;
+}
 
+.active{
+    background-color: lightblue;
 }
 
 .box.easy{
@@ -43,5 +53,6 @@ header{
 }
 
 footer{
+    height: 70px;
     background-color: bisque;
 }
