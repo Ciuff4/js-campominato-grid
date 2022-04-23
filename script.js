@@ -12,25 +12,48 @@ document.getElementById("bottone").addEventListener("click", start);
 
 function start(){
     reset(wrapper);
+    const level= document.getElementById("level").value;
+    const livelli= [100,81,49];
+    const totBox= livelli[level];
+    createCont(totBox);
+}
+
+
+/**
+ * funzione che sceglie il livello di difficoltà
+ * @param {*} dove 
+ * @param {*} n 
+ */
+
+
+
+
+/**
+ * funzione che crea la griglia di gioco
+ * @param {*} dove 
+ * @param {*} n 
+ */
+function createCont(totBox){
     const container= document.createElement("div");
     container.className="cg-container";
     wrapper.append(container);
-    for (let i = 1; i <= 100; i++) {
-        const box=boxCreation(container, i)
-        
+    for (let i = 1; i <= totBox; i++) {
+        boxCreation(container, i, totBox);
     }
 }
+
 
 
 /**
  * funzione che crea i box
  * @param {} place 
  */
-function boxCreation(dove, n){
+function boxCreation(dove, n, totBox){
     const box= document.createElement("div");
-    box.className="box";
+    box.className="box b"+totBox;
     box.innerHTML=`<span> ${n} </span>`;
     dove.append(box);
+    return box
 }
 
 
