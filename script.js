@@ -18,15 +18,10 @@ function start(){
     createCont(totBox);
 }
 
-
-/**
- * funzione che sceglie il livello di difficoltà
- * @param {*} dove 
- * @param {*} n 
- */
-
-
-
+function activated() {
+    this.classList.add("active");
+    console.log(this);
+}
 
 /**
  * funzione che crea la griglia di gioco
@@ -53,6 +48,7 @@ function boxCreation(dove, n, totBox){
     box.className="box b"+totBox;
     box.innerHTML=`<span> ${n} </span>`;
     dove.append(box);
+    box.addEventListener("click", activated)
     return box
 }
 

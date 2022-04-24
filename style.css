@@ -5,13 +5,13 @@
 
 header{
     height: 60px;
-    background-color: bisque;
+    background-color: #E6EBEE;
 }
 
 
 main{
     height: calc(100vh - 130px);
-    background-color: #98794B;
+    background-color: #A28671;
 }
 /* GRID */
 .cg-container{
@@ -21,7 +21,6 @@ main{
     display: flex;
     align-content: flex-start;
     flex-wrap: wrap;
-    background-color: red;
 }
 
 .box{
@@ -29,6 +28,7 @@ main{
     justify-content: center;
     align-items: center;
     border: 1px solid white;
+    background-color: #D2B08B;
 }
 
 .active{
@@ -52,5 +52,5 @@ main{
 
 footer{
     height: 70px;
-    background-color: bisque;
+    background-color: #E6EBEE;
 }
